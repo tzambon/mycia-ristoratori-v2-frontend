@@ -1,7 +1,9 @@
+import clsx from 'clsx';
+import "./assets/app.css";
 
 function App() {
     return (
-        <div></div>
+        <div className={clsx("app")}></div>
     );
 }
 
