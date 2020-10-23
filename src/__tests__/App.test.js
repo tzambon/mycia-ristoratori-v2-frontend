@@ -1,8 +1,10 @@
 import { render } from '@testing-library/react';
 import App from '../App';
 
-test('renders learn react link', () => {
-    const view = render(<App />);
+describe("App Component", function () {
+    test("it renders a container with .app class", () => {
+        const screen = render(<App />);
 
-    expect(view.baseElement.querySelector("div")).not.toBeNull();
+        expect(screen.baseElement.querySelector(".app")).not.toBeNull();
+    });
 });
