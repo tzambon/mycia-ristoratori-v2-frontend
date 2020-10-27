@@ -16,10 +16,18 @@ describe("Dish Component", function () {
         expect(view.getByText(expected)).toBeInTheDocument();
     });
 
-    test("it display normal content", () => {
+    test("it displays normal content", () => {
         let expected = "some normal content";
 
         let view = render(<Dish>some normal content</Dish>);
+
+        expect(view.getByText(expected)).toBeInTheDocument();
+    });
+
+    test("it displays complex content", () => {
+        let expected = "some complex content";
+
+        let view = render(<Dish><p>some complex content</p></Dish>);
 
         expect(view.getByText(expected)).toBeInTheDocument();
     });
