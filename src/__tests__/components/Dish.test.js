@@ -15,4 +15,12 @@ describe("Dish Component", function () {
 
         expect(view.getByText(expected)).toBeInTheDocument();
     });
+
+    test("it display normal content", () => {
+        let expected = "some normal content";
+
+        let view = render(<Dish>some normal content</Dish>);
+
+        expect(view.getByText(expected)).toBeInTheDocument();
+    });
 });

@@ -1,7 +1,9 @@
 
-function Dish() {
+function Dish(props) {
+    const { children } = props;
+
     return (
-        <div className="dish">some weird content</div>
+        <div className="dish">{children}</div>
     );
 }
 
