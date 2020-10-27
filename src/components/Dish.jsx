@@ -1,7 +1,7 @@
 
 function Dish() {
     return (
-        <div className="dish"></div>
+        <div className="dish">some weird content</div>
     );
 }
 

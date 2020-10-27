@@ -7,4 +7,12 @@ describe("Dish Component", function () {
 
         expect(view.baseElement.querySelector("div.dish")).not.toBeNull();
     });
+
+    test("it display a weird content", () => {
+        let expected = "some weird content";
+
+        let view = render(<Dish>some weird content</Dish>);
+
+        expect(view.getByText(expected)).toBeInTheDocument();
+    });
 });
